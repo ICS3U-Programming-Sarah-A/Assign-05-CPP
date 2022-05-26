@@ -17,7 +17,7 @@ float CalcVolume(float base, float height) {
     return volume;
 }
 
-// this function calcualtes the lateral surface area.
+// this function calculates the lateral surface area.
 float CalcLatArea(float base, float height) {
     float lateralArea;
     lateralArea = base * (sqrt(pow(base, 2) + 4*(pow(height, 2))));
@@ -31,7 +31,7 @@ int main() {
     float heightFloat;
     float baseFloat;
     float volumeSqu;
-    float latSq;
+    float latAreaSq;
     std::string baseString, heightString;
 
     // introduction
@@ -59,7 +59,7 @@ int main() {
             // sets a range & calls the function
             if (baseFloat > 0 && heightFloat > 0) {
                volumeSqu = CalcVolume(baseFloat, heightFloat);
-               latSq = CalcLatArea(baseFloat, heightFloat);
+               latAreaSq = CalcLatArea(baseFloat, heightFloat);
 
                // display results to the user
                std::cout << std::endl;
@@ -69,7 +69,7 @@ int main() {
                          << std::fixed;
                std::cout << "the lateral surface area of the square pyramid ";
                             "pyramid is ";
-               std::cout << std::setprecision(2) << latSq << " cm².";
+               std::cout << std::setprecision(2) << latAreaSq << " cm².";
             } else {
                 std::cout << "The base and height must be greater than 0.";
                 std::cout << std::endl;
